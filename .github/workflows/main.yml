@@ -57,8 +57,6 @@ jobs:
       - name: Add API files to Zip file
         run: cd ./api && zip -g ../api.zip -r .
       - name: Upload zip file artifact
-        # uploads artifacts from your workflow allowing you to share data between jobs 
-        # Stores data once a workflow is complete
         uses: actions/upload-artifact@v2
         with:
           name: api
