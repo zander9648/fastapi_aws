@@ -5,11 +5,11 @@ on:
     branches: [ main ]
 
 jobs:
-  CI:
 
+  CI:
     runs-on: ubuntu-latest
+
     steps:   
-      - name: Check out repo
       - uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v2
