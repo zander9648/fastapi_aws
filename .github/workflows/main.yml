@@ -1,30 +1,20 @@
 name: FastAPI CI/CD
 
 on:
-  # Trigger the workflow on push
   push:
-    # Push events on main branch
     branches: [ main ]
 
-# The Job defines a series of steps that execute on the same runner.
 jobs:
   CI:
-    # Define the runner used in the workflow
+
     runs-on: ubuntu-latest
     steps:   
-      # Check out repo so our workflow can access it
       - name: Check out repo
       - uses: actions/checkout@v2
-
-      # Step-1 Setup Python
       - name: Set up Python
-        # This action sets up a Python environment for use in actions
         uses: actions/setup-python@v2
         with:
           python-version: 3.7
-          # optional: architecture: x64 x64 or x86. Defaults to x64 if not specified
-
-      # Step-2 Install Python Virtual ENV
       - name: Install Python Virtual ENV
         run: pip3 install virtualenv
 
