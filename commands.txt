@@ -5,6 +5,7 @@ uvicorn api.main:app --reload
 pip install pytest
 pip install requests
 pip freeze > requirements.txt
+pip install mangum
 
 
 aws configure
